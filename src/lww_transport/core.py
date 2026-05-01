@@ -754,15 +754,14 @@ def _is_cfg(obj) -> bool:
 
 def _cfg_params(cfg, params: Optional[Params] = None) -> Params:
     """Build a core ``Params`` object from ``LWWConfig``."""
-    src = params if params is not None else getattr(cfg, "params", DEFAULT)
     vals = {}
     for field in Params.__dataclass_fields__:
         if field == "Nx":
-            vals[field] = int(getattr(cfg, "nx", getattr(src, "Nx", DEFAULT.Nx)))
+            vals[field] = int(getattr(cfg, "nx", DEFAULT.Nx))
         elif field == "N":
-            vals[field] = int(getattr(cfg, "n", getattr(src, "N", DEFAULT.N)))
+            vals[field] = int(getattr(cfg, "n", DEFAULT.N))
         else:
-            vals[field] = getattr(src, field, getattr(DEFAULT, field))
+            vals[field] = getattr(cfg, field, getattr(DEFAULT, field))
     return Params(**vals)
 
 
