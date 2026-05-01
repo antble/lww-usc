@@ -40,7 +40,14 @@ location, set ``LWW_TRANSPORT_OPENMP_INCLUDE`` and
 ``LWW_TRANSPORT_OPENMP_LIB`` before rebuilding. At runtime, use
 ``OPENMP_NUM_THREADS`` to control the number of OpenMP threads.
 
-Build the HTML documentation with:
+Documentation
+-------------
+
+The built documentation is hosted on GitHub Pages at:
+
+   https://antble.github.io/lww-usc/
+
+To build the HTML documentation locally:
 
 .. code-block:: bash
 
