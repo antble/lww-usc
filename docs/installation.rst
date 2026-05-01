@@ -1,0 +1,48 @@
+Installation
+============
+
+Install the package in editable mode from the package directory:
+
+.. code-block:: bash
+
+   cd lww_transport
+   pip install -e .
+
+To install the documentation tools as well:
+
+.. code-block:: bash
+
+   pip install -e ".[docs]"
+
+To install optional Numba-compiled kernels:
+
+.. code-block:: bash
+
+   pip install -e ".[speedups]"
+
+The package includes a C++ extension for the hot matrix assembly and reduction
+kernels. A normal editable install builds that extension:
+
+.. code-block:: bash
+
+   pip install -e .
+
+To enable OpenMP support in the C++ extension, rebuild with:
+
+.. code-block:: bash
+
+   LWW_TRANSPORT_OPENMP=1 pip install -e .
+
+On macOS, OpenMP requires ``libomp``. If it is installed in a non-standard
+location, set ``LWW_TRANSPORT_OPENMP_INCLUDE`` and
+``LWW_TRANSPORT_OPENMP_LIB`` before rebuilding. At runtime, use
+``OPENMP_NUM_THREADS`` to control the number of OpenMP threads.
+
+Build the HTML documentation with:
+
+.. code-block:: bash
+
+   cd lww_transport
+   sphinx-build -b html docs docs/_build/html
+
+The generated site is written to ``docs/_build/html``.

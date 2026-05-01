@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "numpy>=1.23"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lww-transport"
+version = "0.1.0"
+description = "One-dimensional Lattice Weyl-Wigner / Wigner-Poisson quantum transport simulator."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "LWW-Quantum Transport"}]
+dependencies = ["numpy>=1.23", "pandas>=1.5", "matplotlib>=3.6", "scipy>=1.10"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+docs = ["sphinx>=7", "sphinx-rtd-theme>=2"]
+speedups = ["numba>=0.60"]
+
+[project.scripts]
+lww-transport = "lww_transport.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
