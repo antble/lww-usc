@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from lww_transport import LWWConfig, LWW1DSimulator
 
 
@@ -17,9 +16,6 @@ sample_every = 10
 progress_every = 50
 kernel_backend = "cpp"           # "python", "numba", or "cpp"
 verbose = True
-
-
-output_folder.mkdir(parents=True, exist_ok=True)
 
 cfg = LWWConfig(
     nx=nx,

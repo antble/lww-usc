@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from lww_transport import LWWConfig, LWW1DSimulator
-
+from lww_transport import save_rtd_geometry_image
 # ── Output ────────────────────────────────────────────────────────────────────
 output_folder = Path("lww_output_transient_v2")
 
@@ -17,7 +17,7 @@ re    = 2.0           # Spin degeneracy
 
 # ── Geometry ──────────────────────────────────────────────────────────────────
 box     = 550.0       # Device length [nm]
-well    = 100.0        # Quantum well width [nm]
+well    = 60.0        # Quantum well width [nm]
 barrier = 30.0        # Barrier width [nm]
 spacer  = 30.0        # Spacer region [nm]
 pot     = 0.30        # Barrier height [eV]
@@ -63,6 +63,9 @@ cfg = LWWConfig(
     kernel_backend=kernel_backend,
     verbose=verbose,
 )
+
+# Save the geometry image before running the simulation
+save_rtd_geometry_image(cfg, "rtd_geometry_100nm_well.png")
 
 sim = LWW1DSimulator(cfg)
 
