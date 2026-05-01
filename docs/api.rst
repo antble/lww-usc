@@ -12,7 +12,7 @@ Public package API
 Configuration
 -------------
 
-.. automodule:: lww_transport.config
+.. automodule:: lww_transport.config_refactored
    :members:
    :undoc-members:
    :show-inheritance:

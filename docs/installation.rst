@@ -1,11 +1,17 @@
 Installation
 ============
 
-Install the package in editable mode from the package directory:
+Clone the repository from GitHub:
 
 .. code-block:: bash
 
-   cd lww_transport
+   git clone https://github.com/antble/lww-usc.git
+   cd lww-usc
+
+Install the package in editable mode:
+
+.. code-block:: bash
+
    pip install -e .
 
 To install the documentation tools as well:
@@ -21,11 +27,7 @@ To install optional Numba-compiled kernels:
    pip install -e ".[speedups]"
 
 The package includes a C++ extension for the hot matrix assembly and reduction
-kernels. A normal editable install builds that extension:
-
-.. code-block:: bash
-
-   pip install -e .
+kernels, built automatically by the editable install above.
 
 To enable OpenMP support in the C++ extension, rebuild with:
 
@@ -42,7 +44,7 @@ Build the HTML documentation with:
 
 .. code-block:: bash
 
-   cd lww_transport
+   cd lww-usc
    sphinx-build -b html docs docs/_build/html
 
 The generated site is written to ``docs/_build/html``.

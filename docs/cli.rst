@@ -29,7 +29,8 @@ Transient run
 
 When ``--verbose`` is set, transient runs print flushed progress lines at the
 start and end of each bias point and every ``--progress-every`` iterations.
-The ``lww_tcurl_<bias>.csv`` files are written to ``--output`` during the run
+The ``lww_tcurl_<bias>.csv`` files (e.g. ``lww_tcurl_0.0080.csv``, bias
+formatted to four decimal places) are written to ``--output`` during the run
 every ``--sample-every`` iterations, rather than only after the full transient
 finishes. State CSV checkpoint files are refreshed after each completed bias
 point.

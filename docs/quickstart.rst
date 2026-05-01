@@ -140,15 +140,17 @@ choice controls matrix assembly and current/density reductions:
 Legacy CSV output
 -----------------
 
-``save_state`` writes the legacy CSV names used by the plotting workflow:
+``save_state`` writes the following CSV files to the output directory:
 
-* ``lww_pypoten.csv``
-* ``lww_pydensity.csv``
-* ``lww_pywigner.csv``
-* ``lww_pywigner_ss.csv``
+* ``lww_pypoten.csv`` — electrostatic potential ``rvs``
+* ``lww_pydensity.csv`` — carrier density
+* ``lww_pycurrent.csv`` — current density profile ``J(x)``
+* ``lww_pywigner.csv`` — Wigner distribution ``f`` (flattened)
+* ``lww_pywigner_ss.csv`` — steady-state reference Wigner ``fr`` (flattened)
 
 ``save_transient`` writes transient current traces named
-``lww_tcurl_<bias>.csv``.
+``lww_tcurl_<bias>.csv``, where ``<bias>`` is formatted to four decimal
+places (e.g. ``lww_tcurl_0.0080.csv``).
 
 When ``run_transient`` receives an ``output_dir`` value, it writes those
 ``lww_tcurl_<bias>.csv`` files incrementally every ``sample_every`` iterations.
