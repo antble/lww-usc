@@ -33,11 +33,11 @@ CLI simulations print the same summary and write ``config_summary.txt`` to the
 output directory. Direct transient runs also save the summary when
 ``output_dir`` is supplied.
 
-Geometry image
---------------
+Plot device geometry
+--------------------
 
-The geometry helper draws the resonant tunneling diode profile from the active
-``LWWConfig``:
+The geometry helper draws the double-barrier RTD potential profile from the
+active ``LWWConfig``:
 
 .. image:: _static/rtd_geometry.png
    :alt: Resonant tunneling diode geometry profile

@@ -45,13 +45,17 @@ force a specific implementation. ``--no-numba`` is kept as a legacy alias for
 LAPACK band storage; the backend option selects the assembly/reduction kernels
 around that solve.
 
-Geometry image
---------------
+Plot device geometry
+--------------------
 
 .. code-block:: bash
 
    lww-transport geometry --output output --nx 86 --n 72
 
-This writes ``rtd_geometry.png`` and ``config_summary.txt`` to ``--output``.
+This draws the double-barrier RTD potential profile for the given configuration
+and writes ``rtd_geometry.png`` and ``config_summary.txt`` to ``--output``.
 
-For fast development checks, reduce ``--nx``, ``--n``, ``--ivn``, and ``--itn``.
+.. tip::
+
+   For fast development checks, reduce ``--nx`` and ``--n`` for all commands,
+   and reduce ``--ivn`` and ``--itn`` for transient runs.

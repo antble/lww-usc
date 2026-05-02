@@ -6,8 +6,8 @@ lww-transport
    :width: 80%
    :align: center
 
-   Wigner distribution function for a symmetric GaAs-AlGaAs-GaAs RTD with 30 Angstrom
-   barrier and 50 Angstrom quantum-well widths with zero bias at T = 70K
+   Wigner distribution function for a symmetric GaAs/AlGaAs/GaAs RTD with 30 Å barrier
+   width and 50 Å quantum-well width at zero bias, T = 70 K
 
 ``lww-transport`` is a reusable Python package for one-dimensional Lattice Weyl-Wigner / Wigner-Poisson quantum transport simulations.
 
