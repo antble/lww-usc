@@ -1,7 +1,35 @@
 Citations
 =========
 
-Core LWW/Wigner transport references are listed below.
+Citing this package
+-------------------
+
+If you use ``lww-transport`` in your research, please cite both the software
+itself and the original physics papers that the implementation is based on.
+
+**Software citation** (BibTeX)::
+
+    @software{valcamposano2026lwwtransport,
+      author    = {Valcamposano, Anthony},
+      title     = {{lww-transport: A Python package for 1D Lattice
+                   Weyl-Wigner / Wigner-Poisson quantum transport simulations}},
+      year      = {2026},
+      version   = {0.1.0},
+      license   = {MIT},
+      url       = {https://github.com/antble/lww-usc},
+    }
+
+**APA format**:
+
+   Valcamposano, A. (2026). *lww-transport: A Python package for 1D Lattice
+   Weyl-Wigner / Wigner-Poisson quantum transport simulations* (Version 0.1.0)
+   [Software]. https://github.com/antble/lww-usc
+
+Please also cite the underlying physics methodology (see references below):
+[BuotJensen1990]_ and [JensenBuot1991Method]_.
+
+Core LWW/Wigner transport references
+-------------------------------------
 
 .. [Buot2009] F. A. Buot, *Nonequilibrium Quantum Transport Physics in
    Nanosystems: Foundation of Computational Nonequilibrium Physics in
