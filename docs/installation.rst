@@ -43,10 +43,6 @@ location, set ``LWW_TRANSPORT_OPENMP_INCLUDE`` and
 Documentation
 -------------
 
-The built documentation is hosted on GitHub Pages at:
-
-   https://antble.github.io/lww-usc/
-
 To build the HTML documentation locally:
 
 .. code-block:: bash
