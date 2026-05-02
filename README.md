@@ -2,7 +2,9 @@
 
 ![Steady-state Wigner function](img/wigner_function.png)
 
-A reusable Python package for one-dimensional Lattice Weyl-Wigner / Wigner-Poisson quantum transport simulations.
+A reusable Python package for one-dimensional Lattice Weyl-Wigner quantum transport simulations. 
+
+This package is a user-friendly implementation and modernization of the codebase originally developed in Fortran. The original work was authored by Dr. Kevin Jensen during his time at the Naval Research Laboratory under the supervision of Prof. Felix Buot.
 
 The package implements the reference one-dimensional RTD numerical workflow with a configurable simulator class and explicit CSV I/O.
 
@@ -144,6 +146,26 @@ The reference grid (`nx=86`, `n=72`) solves a banded Wigner system with
 `6192` unknowns. This is still CPU intensive because every transient step
 requires a banded LAPACK factorization. For package tests and development, use a
 smaller grid such as `nx=10, n=8`.
+
+## Citing this package
+
+If you use `lww-transport` in your research, please cite both the software and the original physics papers it is based on.
+
+**BibTeX — software:**
+
+```bibtex
+@software{valcamposano2026lwwtransport,
+  author    = {Camposano, Anthony Val},
+  title     = {{lww-transport: A Python package for 1D Lattice
+               Weyl-Wigner quantum transport simulations}},
+  year      = {2026},
+  version   = {0.1.0},
+  license   = {GPL-3.0-or-later},
+  url       = {https://github.com/antble/lww-usc},
+}
+```
+
+Also cite the foundational physics papers below.
 
 ## References
 
